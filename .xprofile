@@ -1,0 +1,9 @@
+# This file is usually sourced by mose display managers
+# I guess scripts here run after login and before window manager or desktop environment
+# set primary monitor which is used by i3wm outputs tray
+xrandr --output LVDS-1 --primary
+# set input methods
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULES=ibus
+ibus-daemon -drx
